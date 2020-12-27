@@ -14,14 +14,14 @@ main (){
   // Apresente a quantidade de pacientes com mais de 20 anos
   // Agrupar os pacientes por familia(considerar o sobrenome) apresentar por familia.
 
-  List<String> listaDePacientesMaioresDe20Anos = List();
-  List<String> nomesFamilias = List();
+  var listaDePacientesMaioresDe20Anos = <String>[];
+  var nomesFamilias = <String>[];
 
   for(String linhaPaciente in pacientes){   
     List<String> linhaSplitada = linhaPaciente.split("|");
     String nome = linhaSplitada[0];
     int idade = int.tryParse(linhaSplitada[1]) ?? 0;
-    if(idade>20) {
+    if(idade > 20) {
       listaDePacientesMaioresDe20Anos.add(linhaPaciente);
     }
     String sobrenome = nome.split(" ")[1];
