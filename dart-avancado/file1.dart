@@ -1,0 +1,1 @@
+int soma(int parametro1, int parametro2) => parametro1 + parametro2;
